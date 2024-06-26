@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 //create your first component
 const Home = () => {
@@ -7,20 +7,31 @@ const Home = () => {
 	console.log(color);
 
 	return (
-		<div className="text-center">
+		<div className="container d-flex justify-content-center align-items-center">
 
-			<div className={`bg-danger ${( color === 'red') ? 'active' : ''}`} onClick={() => setColor("red")}>
-				ROJO
+
+			<div className="col-sm-1 col-md-1 col-lg-1">
+				<div className="bg-dark text-center" id="barra">
+				<br />
+				<br />
+				<br />
+				</div>
+				<div className="bg-dark rounded-3 p-3 text-center">
+					<div className={`row-1 ${(color === 'red') ? 'bg-danger' : 'bg-danger bg-opacity-50'} rounded-circle text-nowrap fs-1 mb-2 p-0`} onClick={() => setColor("red")}>
+					&nbsp;
+					</div>
+
+					<div className={`row-1 ${(color === 'yellow') ? 'bg-warning' : 'bg-warning bg-opacity-50'} rounded-circle text-warning fs-1 mb-2`} onClick={() => setColor("yellow")}>
+						&nbsp;
+					</div>
+
+					<div className={`row-1 ${(color === 'green') ? 'bg-success' : 'bg-success bg-opacity-50'} rounded-circle text-success fs-1`} onClick={() => setColor("green")}>
+						&nbsp;
+					</div>
+				</div>
+
+
 			</div>
-
-			<div className={`bg-warning ${(color === 'yellow') ? 'active' : ''}`} onClick={() => setColor("yellow")}>
-				AMARILLO
-			</div>
-
-			<div className={`bg-success ${(color === 'green') ? 'active' : ''}`} onClick={() => setColor("green")}>
-				VERDE
-			</div>
-
 		</div>
 	);
 };
