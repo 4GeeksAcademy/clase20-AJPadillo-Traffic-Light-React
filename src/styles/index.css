@@ -1,5 +1,16 @@
 
 #barra {
+    width: 20px;
     margin-left: 35px;
-    margin-right: 35px;
+}
+
+#semaforo {
+    width: 90px;
+    height: 223px;
+    
+}
+
+.luzSemaforo {
+    width: 58px;
+    height: 58px;
 }

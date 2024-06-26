@@ -7,29 +7,28 @@ const Home = () => {
 	console.log(color);
 
 	return (
-		<div className="container d-flex justify-content-center align-items-center">
+		<div className="container">
+			<div className="col d-flex justify-content-center align-items-center">
+				<div>
+					<div className="bg-dark" id="barra">
+						<br />
+						<br />
+						<br />
+					</div>
+					<div className="bg-dark rounded-3 p-3 pb-0 text-center" id="semaforo">
+						<div className={`luzSemaforo ${(color === 'red') ? 'bg-danger' : 'bg-danger bg-opacity-50'} rounded-circle text-nowrap fs-1 mb-2 m-auto`} onClick={() => setColor("red")}>
+							&nbsp;
+						</div>
 
+						<div className={`luzSemaforo ${(color === 'yellow') ? 'bg-warning' : 'bg-warning bg-opacity-50'} rounded-circle text-nowrap fs-1 mb-2 m-auto`} onClick={() => setColor("yellow")}>
+							&nbsp;
+						</div>
 
-			<div className="col-sm-1 col-md-1 col-lg-1">
-				<div className="bg-dark text-center" id="barra">
-				<br />
-				<br />
-				<br />
+						<div className={`luzSemaforo ${(color === 'green') ? 'bg-success' : 'bg-success bg-opacity-50'} rounded-circle text-nowrap fs-1 m-auto`} onClick={() => setColor("green")}>
+							&nbsp;
+						</div>
+					</div>
 				</div>
-				<div className="bg-dark rounded-3 p-3 text-center">
-					<div className={`row-1 ${(color === 'red') ? 'bg-danger' : 'bg-danger bg-opacity-50'} rounded-circle text-nowrap fs-1 mb-2 p-0`} onClick={() => setColor("red")}>
-					&nbsp;
-					</div>
-
-					<div className={`row-1 ${(color === 'yellow') ? 'bg-warning' : 'bg-warning bg-opacity-50'} rounded-circle text-warning fs-1 mb-2`} onClick={() => setColor("yellow")}>
-						&nbsp;
-					</div>
-
-					<div className={`row-1 ${(color === 'green') ? 'bg-success' : 'bg-success bg-opacity-50'} rounded-circle text-success fs-1`} onClick={() => setColor("green")}>
-						&nbsp;
-					</div>
-				</div>
-
 
 			</div>
 		</div>
